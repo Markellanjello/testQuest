@@ -1,4 +1,3 @@
 Воробьев, Захар, Михайлович, Воробьев инк, 89992345678, 84952345678
 Филиппов, Никита, Александрович, Филиппов лаб, 89996789012, 84956789012
 Яковлев, Владимир, Степанович, Яковлев и ко, 89994567890, 84954567890
-id in ({search}) or surname in ({search}) or name in ({search}) or father_name in ({search}) or org_name in ({search}) or phone_pub in ({search}) or work_phone in ({search}
