@@ -37,8 +37,7 @@ def main():
         if index == "exit":
             return
         data = cur.execute(f"SELECT * FROM directory WHERE id={int(index)}").fetchone()
-        print(f"Вы собираетесь редактировать - {data}")
-        person = input("Введите данные через запятую, в том же формате: ").split(", ")
+        person = input(f"Вы собираетесь редактировать - {data} Введите данные через запятую, в том же формате: ").split(", ")
         sqlaaaa(f"UPDATE directory SET surname='{person[0]}', name='{person[1]}', father_name='{person[2]}', org_name='{person[3]}', phone_pub='{person[4]}', work_phone='{person[5]}' WHERE id={index}")
     #Функция Удаления
     def directory_delete():
@@ -51,8 +50,7 @@ def main():
     #Функция командного интерфейса
     def choose_command():
         while True:
-            print("Список команд: show, edit, dump, delete, search, exit: ")
-            command = input("Введите команду: ")
+            command = input("Список команд: show, edit, dump, delete, search, exit Введите команду: ")
             if command == "show":
                 all_data = cur.execute("SELECT * FROM directory").fetchall()
                 pd_show(all_data)
