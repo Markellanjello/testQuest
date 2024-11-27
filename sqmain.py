@@ -34,7 +34,7 @@ def main():
     def search_dir():
         search = input("Введите данные для поиска через запятую например - Иванов, 8991411414141: ")
         search_items = search.split(", ")
-        query = "SELECT * FROM directory WHERE " + " OR ".join([f"{col} LIKE '%{term}%'" for col in
+        query = "SELECT * FROM directory WHERE " + " OR ".join([f"{col} LIKE '%{item}%'" for col in
                                                                 ['id', 'surname', 'name', 'father_name', 'org_name',
                                                                  'phone_pub', 'work_phone'] for item in search_items])
         cur.execute(query)
