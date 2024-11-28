@@ -16,8 +16,8 @@ def main():
     #Функция командного интерфейса
     while True:
         command = input("Список команд: show, edit, dump, delete, search, exit Введите команду: ")
-        all_data = cur.execute("SELECT * FROM directory").fetchall()
         con.commit()
+        all_data = cur.execute("SELECT * FROM directory").fetchall()
         if command == "show": pd_show(all_data)
         elif command == "edit":
             pd_show(all_data)
