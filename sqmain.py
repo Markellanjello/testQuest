@@ -3,7 +3,6 @@ import pandas as pd
 def main():
     con = sq.connect('directory.db')
     cur = con.cursor()
-    # Исправление создания таблицы
     cur.execute("""CREATE TABLE IF NOT EXISTS directory (id INTEGER PRIMARY KEY AUTOINCREMENT, surname TEXT, name TEXT, father_name TEXT, org_name TEXT, phone_pub TEXT, work_phone TEXT)""")
     # Сохранил пару строк за счет этой функции
     def sqlaaaa(command):
